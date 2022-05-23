@@ -6,7 +6,7 @@ export const Container: any = styled.div`
 `;
 export const Wrapper: any = styled.div`
   background-color: #fff;
-  height: 100vh;
+  min-height: 100vh;
   max-width: 560px;
   margin: 0 auto;
   padding: 0;
