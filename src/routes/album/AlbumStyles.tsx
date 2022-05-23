@@ -8,7 +8,7 @@ export const Inner: any = styled.div`
 export const Photos: any = styled.div`
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  width: 100%;
 `;
 export const Photo: any = styled.div`
   width: 115px;
@@ -21,6 +21,7 @@ export const Photo: any = styled.div`
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  flex: 0 0 33.333333%;
 
   &:focus {
     outline: none;
