@@ -1,52 +1,48 @@
 import styled from "styled-components";
 
+export const Inner: any = styled.div`
+  margin: 0 auto;
+`;
 export const LogoWrapper: any = styled.div`
-  padding: 10px 0;
   text-align: center;
-`;
-export const SignUp: any = styled.p`
-  font-family: "Futura PT";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 23px;
-  display: flex;
-  align-items: center;
-  margin: 15px 0 0;
-  color: #262626;
-`;
-export const Form: any = styled.form`
   padding: 20px 0;
 `;
-export const FormInner: any = styled.div`
+export const Form: any = styled.form`
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 420px;
 `;
 
-export const CountryWrapper: any = styled.div`
+export const Input: any = styled.input`
   background: #f4f4f4;
   border: 1px solid #eeeeee;
   border-radius: 10px;
-  width: 70px;
+  margin: 20px 0 0;
   height: 40px;
-  margin: 0 10px 0 0;
+  font-family: "Futura PT";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
   display: flex;
-`;
-export const Flag: any = styled.div`
-  width: 30px;
-  height: 25px;
-  margin: 8px 8px 7px 8px;
-`;
-export const ArrowWrapper: any = styled.div``;
-
-export const Number: any = styled.input`
-  background: #f4f4f4;
-  border: 1px solid #eeeeee;
-  border-radius: 10px;
-  width: 265px;
-  height: 40px;
+  align-items: center;
+  color: #262626;
+  width: 100%;
+  padding: 15px 13px;
   outline: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 
-  &:focus {
-    outline: none;
+  &::placeholder {
+    font-family: "Futura PT";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+
+    color: #6d6d6d;
   }
 `;

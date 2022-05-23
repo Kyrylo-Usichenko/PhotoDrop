@@ -4,17 +4,22 @@ import Home from "../routes/home";
 import Profile from "../routes/profile";
 import NotFoundPage from "../routes/notfound";
 import Header from "./header";
+import { Container, Wrapper } from "./Container/Container";
+import Albums from "../routes/albums/Albums";
 
 const App: FunctionalComponent = () => {
   return (
     <div id="preact_root">
-      <Router>
-        <Route path="/" component={Home} />
-        <Route path="/profile/" component={Profile} user="me" />
-        <Route path="/profile/:user" component={Profile} />
-        <Route path="/profile/:user" component={Profile} />
-        <NotFoundPage default />
-      </Router>
+      <Wrapper>
+        <Container>
+          <Router>
+            <Route path="/" component={Home} />
+            <Route path="/albums" component={Albums} />
+
+            <NotFoundPage default />
+          </Router>
+        </Container>
+      </Wrapper>
     </div>
   );
 };

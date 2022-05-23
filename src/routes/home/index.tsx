@@ -1,38 +1,25 @@
 import { FunctionalComponent, h } from "preact";
-import {
-  LogoWrapper,
-  SignUp,
-  Form,
-  FormInner,
-  CountryWrapper,
-  Number,
-  Flag,
-  ArrowWrapper,
-} from "./HomeStyles";
+import { Inner, Form, LogoWrapper, Input } from "./HomeStyles";
 import Logo from "../../components/Logo/Logo";
-import { Container } from "../../components/Container/Container";
-import ArrowDown from "../../components/ArrowDown/ArrowDown";
+import { Link } from "preact-router/match";
+import { Button } from "../../components/Button/Button";
 
 const Home: FunctionalComponent = () => {
   return (
-    <Container>
+    <Inner>
       <LogoWrapper>
-        <Logo />
+        <Link href="/">
+          <Logo />
+        </Link>
       </LogoWrapper>
-      <SignUp>Sign up</SignUp>
       <Form>
-        <FormInner>
-          <CountryWrapper>
-            <Flag />
-            <ArrowWrapper>
-              <ArrowDown />
-            </ArrowWrapper>
-          </CountryWrapper>
-          <Number type="number" />
-        </FormInner>
-        <button>Create account</button>
+        <Input placeholder="Login" type="email" />
+        <Input placeholder="Password" type="password" />
+        <Link style={{ width: "100%" }} href={"/albums"}>
+          <Button type="submit" />
+        </Link>
       </Form>
-    </Container>
+    </Inner>
   );
 };
 

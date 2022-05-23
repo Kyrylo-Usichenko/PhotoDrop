@@ -1,7 +1,12 @@
 import { FunctionalComponent, h } from "preact";
+import styled from "styled-components";
 
 const Logo: FunctionalComponent = () => {
-  return <img src="./../../assets/icons/logo.svg" alt="logo" />;
+  return <Img src="./../../assets/icons/logo.svg" alt="logo" />;
 };
+
+const Img = styled.img`
+  cursor: pointer;
+`;
 
 export default Logo;
